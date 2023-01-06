@@ -9,9 +9,6 @@ function App() {
     <div className="App">
       <h1>Hello world!</h1>
       <TestHeader text="Hey"/>
-      <div>
-        <NordPoolChart />
-      </div>
     </div>
 
   );
