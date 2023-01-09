@@ -9,7 +9,7 @@ import Explanation from '../Explanation/Explanation';
 const FrontPage = () => {
 
     return (
-        <div className="explanation">
+        <div className="front-page">
             <Menu />
             <Greeting />
             <AppName />
