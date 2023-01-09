@@ -5,7 +5,7 @@ import Menu from '../Menu/Menu';
 
 
 
-const PriceEstimationPage = () => {
+const PreviousPricesPage = () => {
 
     return (
         <div className="previous-prices-page">
