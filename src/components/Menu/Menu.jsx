@@ -9,7 +9,6 @@ const Menu = () => {
             <p>Ja myös tähän</p>
         </div>
     )
-
 }
 
 export default Menu
