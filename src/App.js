@@ -9,11 +9,11 @@ import PriceEstimationPage from './components/PriceEstimationPage/PriceEstimatio
 function App() {
   return (
     <BrowserRouter>
-      <Routes>
-        <Route path='calculator' element={<PriceEstimationPage />}/>
-        <Route path='previous-prices' element={<PreviousPricesPage />}/>
-        <Route path='*' element={<FrontPage />}/>
-      </Routes>
+        <Routes>
+          <Route path='*' element={<FrontPage />}></Route>
+          <Route path='calculator' element={<PriceEstimationPage />}></Route>
+          <Route path='previous-prices' element={<PreviousPricesPage />}></Route>
+        </Routes>
     </BrowserRouter>
   )
 }
