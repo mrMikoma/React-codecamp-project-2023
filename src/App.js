@@ -13,8 +13,6 @@ function App() {
         <Route path='calculator' element={<PriceEstimationPage />}/>
         <Route path='previous-prices' element={<PreviousPricesPage />}/>
         <Route path='*' element={<FrontPage />}/>
-
-        
       </Routes>
     </BrowserRouter>
   )
