@@ -1,0 +1,13 @@
+import React from 'react'
+
+const AppName = () => {
+
+    return (
+        <div className="app-name">
+            <h1>Electricity Price Calculator</h1>
+        </div>
+    )
+
+}
+
+export default AppName

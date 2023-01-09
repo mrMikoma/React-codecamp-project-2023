@@ -1,15 +1,16 @@
 
 import './App.css';
-import NordPoolChart from './components/NordPoolChart';
-import TestHeader from './components/TestHeader';
+import Greeting from './components/Greeting/Greeting'
+import AppName from './components/AppName/AppName';
+import Menu from './components/Menu/Menu';
 
 
 function App() {
   return (
     <div className="App">
-      <h1>Hello world!</h1>
-      <TestHeader text="Hey"/>
-      <NordPoolChart />
+      <Menu/>
+      <Greeting/>
+      <AppName/>
     </div>
 
   );
