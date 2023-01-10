@@ -1,8 +1,10 @@
+//import { AddTaskIcon } from '@mui/icons-material';
 import React from 'react'
 
 import AppName from '../AppName/AppName';
 import Menu from '../Menu/Menu';
 import TimeLine from '../TimeLine';
+import AddTask from '../AddTask';
 
 
 
@@ -12,6 +14,7 @@ const PriceEstimationPage = () => {
         <div className="price-estimation-page">
             <Menu />
             <AppName />
+            <AddTask />
             <TimeLine />
         </div>
     )
