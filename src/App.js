@@ -10,9 +10,9 @@ function App() {
   return (
     <BrowserRouter>
         <Routes>
-          <Route path='*' element={<FrontPage />}></Route>
           <Route path='calculator' element={<PriceEstimationPage />}></Route>
-          <Route path='previous-prices' element={<PreviousPricesPage />}></Route>
+          <Route path='previous-page' element={<PreviousPricesPage />}></Route>
+          <Route path='*' element={<FrontPage />}></Route>
         </Routes>
     </BrowserRouter>
   )
