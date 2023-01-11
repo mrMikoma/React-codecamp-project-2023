@@ -1,0 +1,10 @@
+.menu {
+    background-color: lightblue;
+    width: 200px;
+    height: 800px;
+    padding: 20px;
+}
+
+.row {
+    flex-direction: row;
+}

@@ -5,14 +5,17 @@ import AppName from '../AppName/AppName';
 import Menu from '../Menu/Menu';
 import Explanation from '../Explanation/Explanation';
 
+import './style.css'
+
 
 const FrontPage = () => {
 
     return (
         <div className="front-page">
             <Menu />
-            <Greeting />
             <AppName />
+            <Greeting />
+            
             <Explanation />
         </div>
     )
