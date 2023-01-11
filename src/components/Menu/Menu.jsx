@@ -4,6 +4,7 @@ import './style.css'
 import BoltIcon from '@mui/icons-material/Bolt';
 import CalculateIcon from '@mui/icons-material/Calculate';
 import EuroSymbolIcon from '@mui/icons-material/EuroSymbol';
+import Button from '@mui/material/Button';
 
 
 const Menu = () => {
@@ -11,11 +12,16 @@ const Menu = () => {
     return (
         <div className="menu">
             <h3>Menu</h3>
-            <div className='row'>
-                <BoltIcon />
-                <Link to=""> Front Page</Link>
-            </div>
-            
+
+            <BoltIcon />
+            <Link to=""> Front Page</Link>
+
+
+            <Button variant="outlined"
+                startIcon={<CalculateIcon
+                to="calculator"/>}>
+                Calculator
+            </Button>
             <CalculateIcon />
             <Link to="calculator"> Calculator</Link>
             <EuroSymbolIcon />
