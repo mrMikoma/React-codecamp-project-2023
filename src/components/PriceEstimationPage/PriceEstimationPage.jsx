@@ -1,5 +1,6 @@
 //import { AddTaskIcon } from '@mui/icons-material';
 import React from 'react'
+import './style.css'
 
 import AppName from '../AppName/AppName';
 import Menu from '../Menu/Menu';
