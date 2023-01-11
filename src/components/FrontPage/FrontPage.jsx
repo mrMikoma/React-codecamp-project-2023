@@ -13,10 +13,11 @@ const FrontPage = () => {
     return (
         <div className="front-page">
             <Menu />
-            <AppName />
-            <Greeting />
-            
-            <Explanation />
+            <div className='content'>
+                <AppName />
+                <Greeting />
+                <Explanation />
+            </div>
         </div>
     )
 
