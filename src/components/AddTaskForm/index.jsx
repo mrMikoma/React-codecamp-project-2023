@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import Select from "react-select";
-import DatePicker from "react-datepicker";
 import TimePicker from "../TimePicker";
+import IconButton from "@mui/material/IconButton";
 
-const AddTaskForm = () => {
+const AddTaskForm = (addNewTask) => {
   const taskOptions = [
     { value: 1.5, label: "Dishwasher" },
     { value: 1, label: "Computer" },
@@ -11,17 +11,15 @@ const AddTaskForm = () => {
     { value: 4, label: "Oven" },
   ];
 
-  const [taskName, setTaskName] = useState(null);
   const [selectedTask, setSelectedTask] = useState(null);
   const [startDate, setStartDate] = useState(new Date());
   const [endDate, setEndDate] = useState(new Date());
 
+  console.log("täsä")
+  console.log(addNewTask.addNewTask.addNewTask);
+
   return (
     <form>
-      <label>
-        Name:
-        <input type="text" value={taskName} onChange={setTaskName}/>
-      </label>
       <label>Task:</label>
       <Select
         defaultValue={selectedTask}
@@ -32,7 +30,8 @@ const AddTaskForm = () => {
       <TimePicker selectedTime={startDate} setSelectedTime={setStartDate} />
       <label>End time:</label>
       <TimePicker selectedTime={endDate} setSelectedTime={setEndDate} />
-      <input type="submit" value="Add task" />
+
+      <input type="button" value="Add task" onClick={addNewTask.addNewTask.addNewTask} />
     </form>
   );
 };

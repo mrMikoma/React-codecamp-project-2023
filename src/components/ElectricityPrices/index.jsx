@@ -7,7 +7,7 @@ import React from 'react'
 const ElectricityPrices = () => {
 
     return (
-        <h1>Hey!</h1>
+        <h1>Electricity!</h1>
     )
 }
 

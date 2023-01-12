@@ -4,7 +4,7 @@ import AddTaskForm from "../AddTaskForm";
 import AddHomeWorkIcon from "@mui/icons-material/AddHomeWork";
 import Overlay from "react-overlay-component";
 
-const AddTask = () => {
+const AddTask = (addNewTask) => {
   const [isOpen, setOverlay] = useState(false);
 
   const closeOverlay = () => setOverlay(false);
@@ -29,7 +29,7 @@ const AddTask = () => {
       </IconButton>
 
       <Overlay configs={configs} isOpen={isOpen} closeOverlay={closeOverlay}>
-        <AddTaskForm />
+        <AddTaskForm addNewTask={addNewTask}/>
       </Overlay>
     </div>
   );
