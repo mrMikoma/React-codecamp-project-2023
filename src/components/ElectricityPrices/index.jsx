@@ -1,16 +1,19 @@
+import React from "react";
 
-import React from 'react'
+import data from "./day-prices-hours.json";
 
+const ElectricityPrices = (prices, setNewPrices) => {
 
+    console.log(data.prices);
+    console.log(setNewPrices)
 
+    //setNewPrices(data.prices);
 
-const ElectricityPrices = () => {
+  return (
+    <div>
+      <h1>Electricity!</h1>
+    </div>
+  );
+};
 
-    return (
-        <h1>Electricity!</h1>
-    )
-}
-
-export default ElectricityPrices
-
-
+export default ElectricityPrices;

@@ -29,7 +29,7 @@ const AddTask = (addNewTask) => {
       </IconButton>
 
       <Overlay configs={configs} isOpen={isOpen} closeOverlay={closeOverlay}>
-        <AddTaskForm addNewTask={addNewTask}/>
+        <AddTaskForm addNewTask={addNewTask} />
       </Overlay>
     </div>
   );

@@ -1,13 +1,12 @@
 import React, { useState } from "react";
 import Select from "react-select";
 import TimePicker from "../TimePicker";
-import IconButton from "@mui/material/IconButton";
 
 const AddTaskForm = (addNewTask) => {
   const taskOptions = [
-    { value: 1.5, label: "Dishwasher" },
-    { value: 1, label: "Computer" },
-    { value: 2, label: "Gaming Computer" },
+    { value: 1, label: "Dishwasher" },
+    { value: 2, label: "Computer" },
+    { value: 3, label: "Gaming Computer" },
     { value: 4, label: "Oven" },
   ];
 
@@ -15,8 +14,13 @@ const AddTaskForm = (addNewTask) => {
   const [startDate, setStartDate] = useState(new Date());
   const [endDate, setEndDate] = useState(new Date());
 
-  console.log("täsä")
-  console.log(addNewTask.addNewTask.addNewTask);
+  const addNewStartDate = (newStartDate) => {
+    setStartDate(prev => new Set(prev.add(newStartDate)))
+  }
+
+  const addNewEndDate = (newEndDate) => {
+    setEndDate(prev => new Set(prev.add(newEndDate)))
+  }
 
   return (
     <form>
@@ -27,11 +31,22 @@ const AddTaskForm = (addNewTask) => {
         options={taskOptions}
       />
       <label>Start time:</label>
-      <TimePicker selectedTime={startDate} setSelectedTime={setStartDate} />
-      <label>End time:</label>
-      <TimePicker selectedTime={endDate} setSelectedTime={setEndDate} />
+      <TimePicker selectedTime={startDate} setSelectedTime={addNewStartDate} />
 
-      <input type="button" value="Add task" onClick={addNewTask.addNewTask.addNewTask} />
+      <label>End time:</label>
+      <TimePicker selectedTime={endDate} setSelectedTime={addNewEndDate} />
+
+      <input
+        type="button"
+        value="Add task"
+        onClick={(event) =>
+          addNewTask.addNewTask.addNewTask(
+            event.selectedTask,
+            event.startDate,
+            event.endDate
+          )
+        }
+      />
     </form>
   );
 };

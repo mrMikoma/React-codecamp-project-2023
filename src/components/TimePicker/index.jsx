@@ -3,7 +3,7 @@ import "./style.css";
 
 import DatePicker from "react-datepicker";
 
-const TimePicker = ({selectedTime, setSelectedTime}) => {
+const TimePicker = ({ selectedTime, setSelectedTime }) => {
   return (
     <DatePicker
       selected={selectedTime}
@@ -12,7 +12,7 @@ const TimePicker = ({selectedTime, setSelectedTime}) => {
       showTimeSelectOnly
       timeIntervals={15}
       timeCaption="Time"
-      dateFormat="H:mm"
+      dateFormat="h:mm aa"
     />
   );
 };

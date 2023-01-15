@@ -1,10 +1,9 @@
-import React, { useEffect } from "react";
-import moment from "moment";
+import React from "react";
 import Timeline from "react-calendar-timeline";
-// make sure you include the timeline stylesheet or the timeline will not be styled
 import "./style.css";
+import ElectricityPrices from "../ElectricityPrices";
 
-const TimeLine = (tasks) => {
+const TimeLine = (tasks, setNewTask) => {
   const groups = [
     { id: 1, title: "Dishwasher" },
     { id: 2, title: "Computer" },
@@ -12,15 +11,58 @@ const TimeLine = (tasks) => {
     { id: 4, title: "Oven" },
   ];
 
+  let dayStartDate = Date.now();
+  let dayEndDate = Date.now() + 86400000;
+
+  const handleItemMode = (itemId, dragTime, newGroupOrder) => {
+    console.log("Moving task...");
+
+    /*
+    setNewTask({
+      tasks: tasks.map(item =>
+        item.id === itemId ?
+        Object.assign({}, item, {
+          id: tasks.id,
+          group: tasks.group,
+          title: tasks.title,
+          start_time: dragTime,
+          end_time: dragTime + 666,
+          canMove: true,
+        })
+        : item
+      )
+    });
+    */
+    
+    /*
+    setNewTask([
+      ...tasks,
+      ...[
+        {
+          id: tasks.id,
+          group: tasks.group,
+          title: tasks.title,
+          start_time: dragTime,
+          end_time: dragTime + 666,
+          canMove: true,
+        },
+      ],
+    ]);
+    */
+
+    console.log("Moved", itemId, dragTime, newGroupOrder);
+  };
+
   return (
     <div className="price-estimation-page">
       <div>
+        <ElectricityPrices />
         <Timeline
           groups={groups}
           items={tasks.tasks}
-          defaultTimeStart={moment().add(-12, "hour")}
-          defaultTimeEnd={moment().add(12, "hour")}
-          minZoom={360000}
+          visibleTimeStart={dayStartDate}
+          visibleTimeEnd={dayEndDate}
+          minZoom={21600000}
           maxZoom={86400000}
           dragSnap={900000}
           timeSteps={{
@@ -31,6 +73,7 @@ const TimeLine = (tasks) => {
             month: 1,
             year: 1,
           }}
+          onItemMove={ handleItemMode }
         />
       </div>
     </div>
