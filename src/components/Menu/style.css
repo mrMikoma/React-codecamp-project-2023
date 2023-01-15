@@ -1,10 +1,14 @@
 .menu {
     background-color: lightblue;
-    width: 120px;
+    width: 200px;
     height: 800px;
     padding: 20px;
 }
 
-.row {
-    flex-direction: row;
+.header {
+    text-align: center;
+}
+
+.button {
+    padding: 20px
 }
