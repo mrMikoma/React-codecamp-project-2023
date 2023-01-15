@@ -1,7 +1,7 @@
 .menu {
     background-color: lightblue;
     width: 200px;
-    height: 800px;
+    height: 100vh;
     padding: 20px;
 }
 
@@ -10,5 +10,6 @@
 }
 
 .button {
+    
     padding: 20px
 }

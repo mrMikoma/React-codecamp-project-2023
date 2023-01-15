@@ -10,12 +10,14 @@ import Menu from './components/Menu/Menu'
 function App() {
   return (
     <BrowserRouter>
-        <Menu />
-        <Routes>
-          <Route path='calculator' element={<PriceEstimationPage />} />
-          <Route path='previous-page' element={<PreviousPricesPage />}></Route>
-          <Route path='*' element={<FrontPage />}></Route>
-        </Routes>
+        <div className='site'>
+          <Menu />
+          <Routes>
+            <Route path='calculator' element={<PriceEstimationPage />} />
+            <Route path='previous-page' element={<PreviousPricesPage />}></Route>
+            <Route path='*' element={<FrontPage />}></Route>
+          </Routes>
+          </div>
     </BrowserRouter>
   )
 }
