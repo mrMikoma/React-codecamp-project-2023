@@ -5,6 +5,7 @@ import AppName from '../AppName/AppName';
 import Explanation from '../Explanation/Explanation';
 
 import './style.css'
+import ChartMaker from '../ChartMaker/ChartMaker';
 
 
 const FrontPage = () => {
@@ -16,6 +17,7 @@ const FrontPage = () => {
                 <AppName />
                 <Greeting />
                 <Explanation />
+                <ChartMaker />
             </div>
         </div>
     )
