@@ -14,7 +14,7 @@ function App() {
           <Menu />
           <Routes>
             <Route path='calculator' element={<PriceEstimationPage />} />
-            <Route path='previous-page' element={<PreviousPricesPage />}></Route>
+            <Route path='previous-prices' element={<PreviousPricesPage />}></Route>
             <Route path='*' element={<FrontPage />}></Route>
           </Routes>
           </div>

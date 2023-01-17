@@ -39,7 +39,7 @@ const Menu = () => {
                 <Button variant="contained"
                     component={Link}
                     startIcon={<EuroSymbolIcon />}
-                    to="previous-page">
+                    to="previous-prices">
                     Previous Prices
                 </Button>
 
