@@ -1,7 +1,7 @@
 import React from "react";
 import Timeline from "react-calendar-timeline";
 import "./style.css";
-import ElectricityPrices from "../ElectricityPrices";
+
 
 const TimeLine = (tasks, setNewTask) => {
   const groups = [
@@ -33,7 +33,7 @@ const TimeLine = (tasks, setNewTask) => {
       )
     });
     */
-    
+
     /*
     setNewTask([
       ...tasks,
@@ -56,7 +56,6 @@ const TimeLine = (tasks, setNewTask) => {
   return (
     <div className="price-estimation-page">
       <div>
-        <ElectricityPrices />
         <Timeline
           groups={groups}
           items={tasks.tasks}
@@ -73,7 +72,7 @@ const TimeLine = (tasks, setNewTask) => {
             month: 1,
             year: 1,
           }}
-          onItemMove={ handleItemMode }
+          onItemMove={handleItemMode}
         />
       </div>
     </div>

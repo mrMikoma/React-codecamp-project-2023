@@ -1,24 +1,23 @@
 import React, { useState, useEffect } from "react";
 import "./style.css";
 import moment from "moment";
-
+import ElectricityPrices from "../ElectricityPrices";
 import AppName from "../AppName/AppName";
 import TimeLine from "../TimeLine";
 import AddTask from "../AddTask";
-
+import ElectricityCost from "../ElectricityCost";
 
 const PriceEstimationPage = () => {
-  // Example prices
-  //const [prices, setNewPrices] = useState([]);
+  const [prices, setNewPrices] = useState([]);
+  
 
-  /*
   const addNewPrices = (newPrices) => {
-    setNewPrices([...prices, ...newPrices]);
-
-    console.log("And prices are:");
-    console.log(prices);
+    //console.log("Hintojaa!: " + newPrices);
+    setNewPrices([newPrices]); // ...prices, prices.concat(newPrices)
+    //console.log("New prices: " + prices);
   };
-  */
+
+
 
   // Example tasks
   const [tasks, setNewTask] = useState([
@@ -26,6 +25,7 @@ const PriceEstimationPage = () => {
       id: 1,
       group: 1,
       title: "1,25€",
+      value: 1.25,
       start_time: moment().add(1, "hour"),
       end_time: moment().add(2, "hour"),
       canMove: true,
@@ -34,6 +34,7 @@ const PriceEstimationPage = () => {
       id: 2,
       group: 2,
       title: "0,85€",
+      value: 0.85,
       start_time: moment().add(2, "hour"),
       end_time: moment().add(3, "hour"),
       canMove: true,
@@ -42,6 +43,7 @@ const PriceEstimationPage = () => {
       id: 3,
       group: 3,
       title: "2,50€",
+      value: 2.50,
       start_time: moment().add(1, "hour"),
       end_time: moment().add(2, "hour"),
       canMove: true,
@@ -50,6 +52,7 @@ const PriceEstimationPage = () => {
       id: 4,
       group: 4,
       title: "8,50€",
+      value: 8.50,
       start_time: moment().add(3, "hour"),
       end_time: moment().add(4, "hour"),
       canMove: true,
@@ -85,14 +88,16 @@ const PriceEstimationPage = () => {
     console.log("New task added!"); // debug
   };
 
-  // After new task
+  // Recalculate total electcity cost when tasks changes
   useEffect(() => {
-    console.log(tasks);
+    //console.log(tasks);
   }, [tasks]);
 
   return (
     <div className="price-estimation-page">
       <AppName />
+      <ElectricityPrices prices={prices} addNewPrices={addNewPrices} />
+      <ElectricityCost tasks={tasks} />
       <AddTask addNewTask={addNewTask} />
       <TimeLine tasks={tasks} setNewTask={setNewTask} />
     </div>
