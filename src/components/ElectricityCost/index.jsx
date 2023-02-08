@@ -5,14 +5,14 @@ const ElectricityCost = ({ tasks }) => {
 
   // Calculates total cost of every task
   const calculateNewTotalElecticityCost = () => {
-    setNewTotalCost(0.0);
+    let priceValue = 0.0;
 
     Object.values(tasks).forEach((value) => {
-      setNewTotalCost(totalCost + value.value);
+      priceValue += value.value;
       //console.log(value.value); //debug
     });
-
-    console.log("New cost is " + totalCost); //debug
+    setNewTotalCost(priceValue);
+    //console.log("New cost is " + totalCost); //debug
   };
 
   return (
